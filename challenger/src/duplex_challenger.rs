@@ -8,7 +8,7 @@ use serde::{Deserialize, Serialize};
 use crate::{CanObserve, CanSample, CanSampleBits, FieldChallenger};
 
 #[serde_with::serde_as]
-#[derive(Clone, Debug, Serialize, Deserialize)]
+#[derive(Clone, Debug, Serialize, Deserialize, PartialEq, Eq)]
 pub struct DuplexChallenger<F, P, const WIDTH: usize, const RATE: usize>
 where
     F: Clone,
